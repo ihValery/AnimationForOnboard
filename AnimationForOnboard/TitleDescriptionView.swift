@@ -20,7 +20,7 @@ struct TitleDescriptionView: View {
                 .opacity(on ? 1 : 0)
                 .animation(on ? .easeIn(duration: 1).delay(0.4) : nil, value: off)
             
-            Text("Именно такой как я хотел!, три дня назад это было невозможно!")
+            Text("Именно такой как я хотел!\nТри дня назад это было невозможно!")
                 .font(withBang() ? .title : .body)
                 .lineLimit(5)
                 .opacity(on ? 1 : 0)

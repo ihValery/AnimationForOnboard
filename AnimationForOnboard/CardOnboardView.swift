@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CardOnboardView.swift
 //  AnimationForOnboard
 //
 //  Created by Валерий Игнатьев on 29.09.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CardOnboardView: View {
     @State var animate: Bool = false
     @State var noAnimation: Bool = false
     var radius: CGFloat {
@@ -22,7 +22,7 @@ struct ContentView: View {
 
                     SmallBackgroundCircle(radius: radius, on: animate, off: noAnimation)
                     
-                    ForEach(0...1000, id: \.self) { _ in
+                    ForEach(0...500, id: \.self) { _ in
                         GlareOfLight(radius: radius, on: animate, off: noAnimation)
                     }
                     
@@ -56,7 +56,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CardOnboardView()
             .preferredColorScheme(.dark)
     }
 }
