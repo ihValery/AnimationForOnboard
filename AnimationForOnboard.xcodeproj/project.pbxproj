@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		801A9E7F2703F5680092438B /* AnimationForOnboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A9E7E2703F5680092438B /* AnimationForOnboardApp.swift */; };
-		801A9E812703F5680092438B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A9E802703F5680092438B /* ContentView.swift */; };
+		801A9E812703F5680092438B /* CardOnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A9E802703F5680092438B /* CardOnboardView.swift */; };
 		801A9E832703F56E0092438B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A9E822703F56E0092438B /* Assets.xcassets */; };
 		801A9E862703F56E0092438B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A9E852703F56E0092438B /* Preview Assets.xcassets */; };
 		801A9E8D27047BFE0092438B /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A9E8C27047BFD0092438B /* StartButton.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		801A9E7B2703F5680092438B /* Onboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		801A9E7E2703F5680092438B /* AnimationForOnboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationForOnboardApp.swift; sourceTree = "<group>"; };
-		801A9E802703F5680092438B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		801A9E802703F5680092438B /* CardOnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnboardView.swift; sourceTree = "<group>"; };
 		801A9E822703F56E0092438B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801A9E852703F56E0092438B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		801A9E8C27047BFD0092438B /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				801A9E7E2703F5680092438B /* AnimationForOnboardApp.swift */,
-				801A9E802703F5680092438B /* ContentView.swift */,
+				801A9E802703F5680092438B /* CardOnboardView.swift */,
 				801A9E8C27047BFD0092438B /* StartButton.swift */,
 				80B2E8FE270538AD003FEF61 /* BigBackgroundCircle.swift */,
 				80B2E900270538C7003FEF61 /* SmallBackgroundCircle.swift */,
@@ -157,7 +157,7 @@
 			files = (
 				80B2E8FF270538AD003FEF61 /* BigBackgroundCircle.swift in Sources */,
 				801A9E8D27047BFE0092438B /* StartButton.swift in Sources */,
-				801A9E812703F5680092438B /* ContentView.swift in Sources */,
+				801A9E812703F5680092438B /* CardOnboardView.swift in Sources */,
 				80B2E901270538C7003FEF61 /* SmallBackgroundCircle.swift in Sources */,
 				801A9E7F2703F5680092438B /* AnimationForOnboardApp.swift in Sources */,
 				80B2E90527053E4D003FEF61 /* View.swift in Sources */,
@@ -292,15 +292,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 420.13;
+				CURRENT_PROJECT_VERSION = 420.27;
 				DEVELOPMENT_ASSET_PATHS = "\"AnimationForOnboard/Preview Content\"";
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnimationForOnboard/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,15 +324,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 420.13;
+				CURRENT_PROJECT_VERSION = 420.27;
 				DEVELOPMENT_ASSET_PATHS = "\"AnimationForOnboard/Preview Content\"";
 				DEVELOPMENT_TEAM = 879U287R5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AnimationForOnboard/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
