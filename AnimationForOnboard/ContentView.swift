@@ -33,7 +33,7 @@ struct ContentView: View {
                                    value: noAnimation)
                 }
                 
-                TitleDescriptionView()
+                TitleDescriptionView(on: animate, off: noAnimation)
 
                 Spacer(minLength: withBang() ? 50 : 20)
                 
