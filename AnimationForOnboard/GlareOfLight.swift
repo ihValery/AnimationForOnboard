@@ -25,7 +25,7 @@ struct GlareOfLight: View {
         Circle()
             .fill(.white).opacity(Double.random(in: 0.8...1))
             .blur(radius: 1)
-            .offset(pointsOnCircle())
+            .offset(on ? pointsOnCircle() : .zero)
             .animation(nil)
             .opacity(off ? 1 : 0)
             .frame(width: on ? CGFloat(Int.random(in: 1...3)) : 0)
@@ -37,7 +37,7 @@ struct GlareOfLight: View {
         let degress = Int.random(in: 0...360)
         let x = newRadius * cos(Double(degress))
         let y = newRadius * sin(Double(degress))
-        
+
         return CGSize(width: x, height: y)
     }
 }
