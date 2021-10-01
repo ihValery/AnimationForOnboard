@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CardOnboardView: View {
-    @State var animate: Bool = false
-    @State var noAnimation: Bool = false
+    @State var animationON: Bool = false
+    @State var animationOff: Bool = false
     var radius: CGFloat {
         UIScreen.main.bounds.width - (withBang() ? 100 : 60)
     }
@@ -18,22 +18,22 @@ struct CardOnboardView: View {
         VStack {
             VStack {
                 ZStack {
-                    BigBackgroundCircle(radius: radius, on: animate, off: noAnimation)
+                    BigBackgroundCircle(radius, animationON, animationOff)
 
-                    SmallBackgroundCircle(radius: radius, on: animate, off: noAnimation)
+                    SmallBackgroundCircle(radius, animationON, animationOff)
                     
                     ForEach(0...500, id: \.self) { _ in
-                        GlareOfLight(radius: radius, on: animate, off: noAnimation)
+                        GlareOfLight(radius, animationON, animationOff)
                     }
-                    
+                        
                     Text("🐶")
                         .font(.system(size: withBang() ? 180 : 130))
-                        .scaleEffect(animate ? 1 : 0.4)
-                        .animation(animate ? .spring(dampingFraction: 0.4) : .default,
-                                   value: noAnimation)
+                        .scaleEffect(animationON ? 1 : 0.4)
+                        .animation(animationON ? .spring(dampingFraction: 0.4) : .default,
+                                   value: animationOff)
                 }
                 
-                TitleDescriptionView(on: animate, off: noAnimation)
+                TitleDescriptionView(animationON, animationOff)
 
                 Spacer(minLength: withBang() ? 50 : 20)
                 
@@ -46,8 +46,8 @@ struct CardOnboardView: View {
             .padding()
             
             StartButton() {
-                animate.toggle()
-                noAnimation = animate ? !noAnimation : false
+                animationON.toggle()
+                animationOff = animationON ? !animationOff : false
             }
         }
         .drawingGroup()

@@ -12,6 +12,12 @@ struct SmallBackgroundCircle: View {
     var on: Bool
     var off: Bool
     
+    init(_ radius: CGFloat, _ on: Bool, _ off: Bool) {
+        self.radius = radius
+        self.on = on
+        self.off = off
+    }
+    
     var body: some View {
         Circle()
             .fill(
