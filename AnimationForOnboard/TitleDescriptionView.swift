@@ -11,6 +11,11 @@ struct TitleDescriptionView: View {
     var on: Bool
     var off: Bool
     
+    init(_ on: Bool, _ off: Bool) {
+        self.on = on
+        self.off = off
+    }
+    
     var body: some View {
         VStack(spacing: 10) {
             Text("Мой звездный онборд")

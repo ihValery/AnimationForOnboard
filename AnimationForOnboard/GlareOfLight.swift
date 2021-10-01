@@ -11,14 +11,21 @@ struct GlareOfLight: View {
     var radius: CGFloat
     var on: Bool
     var off: Bool
+
     var delay: Double {
         Double.random(in: 1...2)
     }
     var offset: Double {
-        Double(Int.random(in: (withBang() ? 20 : 10)...(withBang() ? 80 : 70)))
+        .random(in: (withBang() ? 20 : 10)...(withBang() ? 80 : 70))
     }
     var duration: Double {
         Double.random(in: 0.1...1)
+    }
+    
+    init(_ radius: CGFloat, _ on: Bool, _ off: Bool) {
+        self.radius = radius
+        self.on = on
+        self.off = off
     }
     
     var body: some View {

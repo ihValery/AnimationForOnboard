@@ -65,12 +65,12 @@
 			children = (
 				801A9E7E2703F5680092438B /* AnimationForOnboardApp.swift */,
 				801A9E802703F5680092438B /* CardOnboardView.swift */,
-				801A9E8C27047BFD0092438B /* StartButton.swift */,
 				80B2E8FE270538AD003FEF61 /* BigBackgroundCircle.swift */,
 				80B2E900270538C7003FEF61 /* SmallBackgroundCircle.swift */,
 				80B2E90227053AFF003FEF61 /* GlareOfLight.swift */,
 				80B2E92227055C17003FEF61 /* TitleDescriptionView.swift */,
-				80B2E90427053E4D003FEF61 /* View.swift */,
+				8099D61F270685700071D85A /* Extension */,
+				801A9E8C27047BFD0092438B /* StartButton.swift */,
 				801A9E822703F56E0092438B /* Assets.xcassets */,
 				801A9E842703F56E0092438B /* Preview Content */,
 			);
@@ -83,6 +83,14 @@
 				801A9E852703F56E0092438B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8099D61F270685700071D85A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				80B2E90427053E4D003FEF61 /* View.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
