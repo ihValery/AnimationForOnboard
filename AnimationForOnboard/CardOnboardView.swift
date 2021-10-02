@@ -8,29 +8,31 @@
 import SwiftUI
 
 struct CardOnboardView: View {
+    var circle = CircleRadius()
+    
     @State var animationON: Bool = false
     @State var animationOff: Bool = false
-    var radius: CGFloat {
-        UIScreen.main.bounds.width - (withBang() ? 100 : 60)
-    }
     
     var body: some View {
         VStack {
             VStack {
                 ZStack {
-                    BigBackgroundCircle(radius, animationON, animationOff)
+                    BigBackgroundCircle(animationON, animationOff)
 
-                    SmallBackgroundCircle(radius, animationON, animationOff)
+                    SmallBackgroundCircle(animationON, animationOff)
                     
-                    ForEach(0...500, id: \.self) { _ in
-                        GlareOfLight(radius, animationON, animationOff)
+                    ForEach(0...29, id: \.self) { _ in
+                        GlareOfLight(animationON, animationOff)
                     }
-                        
+                    
                     Text("🐶")
                         .font(.system(size: withBang() ? 180 : 130))
                         .scaleEffect(animationON ? 1 : 0.4)
                         .animation(animationON ? .spring(dampingFraction: 0.4) : .default,
                                    value: animationOff)
+                    
+                    StarFlare()
+                        .offset(circle.pointsOnCircle())
                 }
                 
                 TitleDescriptionView(animationON, animationOff)
@@ -45,12 +47,16 @@ struct CardOnboardView: View {
             .cornerRadius(25)
             .padding()
             
-            StartButton() {
-                animationON.toggle()
-                animationOff = animationON ? !animationOff : false
+            .onAppear {
+                animationON = false
+                animationOff = false
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    animationON = true
+                    animationOff = true
+                }
             }
         }
-        .drawingGroup()
     }
 }
 

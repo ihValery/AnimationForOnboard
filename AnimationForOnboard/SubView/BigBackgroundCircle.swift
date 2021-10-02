@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct BigBackgroundCircle: View {
-    var radius: CGFloat
+    var circle = CircleRadius()
+    
     var on: Bool
     var off: Bool
     
-    init(_ radius: CGFloat, _ on: Bool, _ off: Bool) {
-        self.radius = radius
+    internal init(_ on: Bool, _ off: Bool) {
         self.on = on
         self.off = off
     }
     
     var body: some View {
         Circle()
-            .fill(.white).opacity(0.1)
+            .fill(.white.opacity(0.1))
             .scaleEffect(on ? 1 : 0)
-            .frame(width: radius)
+            .frame(width: circle.bigDiament)
             .animation(on ? .spring(dampingFraction: 0.4).delay(0.2) : nil,
                        value: off)
             .opacity(off ? 1 : 0)
