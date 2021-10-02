@@ -18,7 +18,7 @@ class CircleRadius {
         screen.width - (withBang ? 100 : 60)
     }
     
-    var bigRadius: CGFloat {
+    private var bigRadius: CGFloat {
         bigDiament / 2
     }
     
@@ -26,13 +26,14 @@ class CircleRadius {
         bigDiament - (withBang ? 100 : 80)
     }
     
-    var smallRadius: CGFloat {
+    private var smallRadius: CGFloat {
         smallDiametr / 2
     }
     
     private var ringWidth: CGFloat {
         (bigRadius - smallRadius)
     }
+    
     private var ringCenter: CGFloat {
         smallRadius + ringWidth / 2
     }
