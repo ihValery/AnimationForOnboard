@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SmallBackgroundCircle: View {
-    var radius: CGFloat
+    var circle = CircleRadius()
+    
     var on: Bool
     var off: Bool
     
-    init(_ radius: CGFloat, _ on: Bool, _ off: Bool) {
-        self.radius = radius
+    internal init(_ on: Bool, _ off: Bool) {
         self.on = on
         self.off = off
     }
@@ -24,7 +24,7 @@ struct SmallBackgroundCircle: View {
                 RadialGradient(colors: [.black, .white], center: .center, startRadius: 0, endRadius: 80)
             ).opacity(0.2)
             .scaleEffect(on ? 1 : 0)
-            .frame(width: radius - (withBang() ? 100 : 80))
+            .frame(width: circle.smallDiametr)
             .animation(on ? .spring(dampingFraction: 0.6).delay(0.5) : nil,
                        value: off)
             .opacity(off ? 1 : 0)

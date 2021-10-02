@@ -12,6 +12,10 @@
 		801A9E832703F56E0092438B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A9E822703F56E0092438B /* Assets.xcassets */; };
 		801A9E862703F56E0092438B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801A9E852703F56E0092438B /* Preview Assets.xcassets */; };
 		801A9E8D27047BFE0092438B /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A9E8C27047BFD0092438B /* StartButton.swift */; };
+		8053039627082BE100F9C32E /* CircleRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8053039527082BE100F9C32E /* CircleRadius.swift */; };
+		8081F0A62708034B0052C554 /* OneBeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8081F0A52708034B0052C554 /* OneBeam.swift */; };
+		8099D6222706BAA90071D85A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099D6212706BAA90071D85A /* OnboardingView.swift */; };
+		8099D624270729C50071D85A /* StarFlare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099D623270729C50071D85A /* StarFlare.swift */; };
 		80B2E8FF270538AD003FEF61 /* BigBackgroundCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2E8FE270538AD003FEF61 /* BigBackgroundCircle.swift */; };
 		80B2E901270538C7003FEF61 /* SmallBackgroundCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2E900270538C7003FEF61 /* SmallBackgroundCircle.swift */; };
 		80B2E90327053AFF003FEF61 /* GlareOfLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2E90227053AFF003FEF61 /* GlareOfLight.swift */; };
@@ -26,6 +30,10 @@
 		801A9E822703F56E0092438B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801A9E852703F56E0092438B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		801A9E8C27047BFD0092438B /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		8053039527082BE100F9C32E /* CircleRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleRadius.swift; sourceTree = "<group>"; };
+		8081F0A52708034B0052C554 /* OneBeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBeam.swift; sourceTree = "<group>"; };
+		8099D6212706BAA90071D85A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8099D623270729C50071D85A /* StarFlare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarFlare.swift; sourceTree = "<group>"; };
 		80B2E8FE270538AD003FEF61 /* BigBackgroundCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBackgroundCircle.swift; sourceTree = "<group>"; };
 		80B2E900270538C7003FEF61 /* SmallBackgroundCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBackgroundCircle.swift; sourceTree = "<group>"; };
 		80B2E90227053AFF003FEF61 /* GlareOfLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlareOfLight.swift; sourceTree = "<group>"; };
@@ -64,11 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				801A9E7E2703F5680092438B /* AnimationForOnboardApp.swift */,
+				8099D6212706BAA90071D85A /* OnboardingView.swift */,
 				801A9E802703F5680092438B /* CardOnboardView.swift */,
-				80B2E8FE270538AD003FEF61 /* BigBackgroundCircle.swift */,
-				80B2E900270538C7003FEF61 /* SmallBackgroundCircle.swift */,
-				80B2E90227053AFF003FEF61 /* GlareOfLight.swift */,
-				80B2E92227055C17003FEF61 /* TitleDescriptionView.swift */,
+				8099D6202706B9630071D85A /* SubView */,
+				8053039527082BE100F9C32E /* CircleRadius.swift */,
 				8099D61F270685700071D85A /* Extension */,
 				801A9E8C27047BFD0092438B /* StartButton.swift */,
 				801A9E822703F56E0092438B /* Assets.xcassets */,
@@ -91,6 +98,19 @@
 				80B2E90427053E4D003FEF61 /* View.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8099D6202706B9630071D85A /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				8099D623270729C50071D85A /* StarFlare.swift */,
+				80B2E8FE270538AD003FEF61 /* BigBackgroundCircle.swift */,
+				80B2E900270538C7003FEF61 /* SmallBackgroundCircle.swift */,
+				80B2E90227053AFF003FEF61 /* GlareOfLight.swift */,
+				8081F0A52708034B0052C554 /* OneBeam.swift */,
+				80B2E92227055C17003FEF61 /* TitleDescriptionView.swift */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,12 +185,16 @@
 			files = (
 				80B2E8FF270538AD003FEF61 /* BigBackgroundCircle.swift in Sources */,
 				801A9E8D27047BFE0092438B /* StartButton.swift in Sources */,
+				8099D624270729C50071D85A /* StarFlare.swift in Sources */,
+				8053039627082BE100F9C32E /* CircleRadius.swift in Sources */,
 				801A9E812703F5680092438B /* CardOnboardView.swift in Sources */,
 				80B2E901270538C7003FEF61 /* SmallBackgroundCircle.swift in Sources */,
 				801A9E7F2703F5680092438B /* AnimationForOnboardApp.swift in Sources */,
 				80B2E90527053E4D003FEF61 /* View.swift in Sources */,
 				80B2E92327055C17003FEF61 /* TitleDescriptionView.swift in Sources */,
+				8081F0A62708034B0052C554 /* OneBeam.swift in Sources */,
 				80B2E90327053AFF003FEF61 /* GlareOfLight.swift in Sources */,
+				8099D6222706BAA90071D85A /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

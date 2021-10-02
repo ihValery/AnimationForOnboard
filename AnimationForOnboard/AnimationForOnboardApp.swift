@@ -11,7 +11,7 @@ import SwiftUI
 struct AnimationForOnboardApp: App {
     var body: some Scene {
         WindowGroup {
-            CardOnboardView()
+            OnboardingView()
         }
     }
 }
